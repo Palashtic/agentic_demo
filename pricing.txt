@@ -1,0 +1,3 @@
+Starter Plan | suitable for small teams with basic CRM needs and simple pipeline tracking
+Growth Plan | suitable for mid-sized teams needing automation and reporting dashboards
+Scale Plan | suitable for larger orgs needing advanced integrations, governance, and forecasting

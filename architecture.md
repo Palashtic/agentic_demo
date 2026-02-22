@@ -1,18 +1,22 @@
 Sales Call Transcript (text)
         │
         ▼
-Agent 1 — Analyst (Gemini, JSON mode)
+Agent 1 — Analyst
+(OpenRouter → LLM, JSON enforced)
 • Extracts pain points
-• Intent score
+• Buying intent
 • Action items
         │  (structured JSON)
         ▼
-Agent 2 — Researcher (Code + optional light AI)
+Agent 2 — Researcher
+(Deterministic code + KB)
 • Reads local knowledge base
-• Matches pain points → case study + pricing
+• Selects case study
+• Selects pricing tier
         │  (grounded context)
         ▼
-Agent 3 — Closer (Gemini)
+Agent 3 — Closer
+(OpenRouter → LLM)
 • Drafts follow-up email
 • Suggests next steps
         │
