@@ -1,5 +1,13 @@
 # Agentic Demo: Agent 1 (Analyst) (Python + React + OpenRouter)
 
+## What this demonstrates
+
+This project shows how to:
+- Orchestrate multiple specialized agents
+- Pass structured context between agents
+- Keep agents small, debuggable, and composable
+- Rapidly ship an AI-native workflow using modern tools
+
 ## 1) Start backend
 
 ```powershell
@@ -8,7 +16,7 @@ pip install -r requirements.txt
 uvicorn backend.app:app --reload --host 127.0.0.1 --port 8001
 ```
 
-## 3) Open UI
+## 2) Open UI
 
 - http://127.0.0.1:8001/
 
@@ -25,7 +33,7 @@ OPENROUTER_MODEL=openrouter/auto
 
 You can change `OPENROUTER_MODEL` to a specific model on OpenRouter.
 
-## Voice (Optional)
+## Voice
 
 If you want voice recording/upload to auto-transcribe into text, set:
 
