@@ -1,31 +1,50 @@
 # Agentic Demo:
 
-Sales Call Transcript (text)
+Sales Call Transcript (raw text)
         │
         ▼
-Agent 1 — Analyst
-(OpenRouter → LLM, JSON enforced)
-• Extracts pain points
-• Buying intent
-• Action items
-        │  (structured JSON)
-        ▼
-Agent 2 — Researcher
-(Deterministic code + KB)
-• Reads local knowledge base
-• Selects case study
-• Selects pricing tier
-        │  (grounded context)
-        ▼
-Agent 3 — Closer
-(OpenRouter → LLM)
-• Drafts follow-up email
-• Suggests next steps
-        │
-        ▼
+┌──────────────────────────┐
+│ Agent 1 — Analyst        │
+│ (OpenRouter → LLM)       │
+│                          │
+│ • Extracts pain points   │
+│ • Scores buying intent   │
+│ • Identifies actions     │
+│                          │
+│ Output: Structured JSON  │
+└─────────────┬────────────┘
+              │
+              ▼
+┌──────────────────────────┐
+│ Agent 2 — Researcher     │
+│ (Deterministic + KB)     │
+│                          │
+│ • Reads local knowledge  │
+│   base (case studies,    │
+│   pricing, playbooks)    │
+│ • Selects relevant case  │
+│ • Chooses pricing tier   │
+│                          │
+│ Output: Grounded context │
+└─────────────┬────────────┘
+              │
+              ▼
+┌──────────────────────────┐
+│ Agent 3 — Closer         │
+│ (OpenRouter → LLM)       │
+│                          │
+│ • Drafts follow-up email │
+│ • Suggests next steps    │
+│ • Personalizes tone      │
+│                          │
+│ Output: Final response   │
+└─────────────┬────────────┘
+              │
+              ▼
 Final Output
-• Structured insight
-• Personalized email
+• Structured insights (JSON)
+• Personalized follow-up email
+• Recommended next actions
 
 
 ## What this demonstrates
